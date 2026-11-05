@@ -3,10 +3,8 @@ const router = express.Router();
 
 const filmsController = require("../controllers/films.controller");
 
-
-const { getFilm } = require("../controllers/films.controller");
 //http://localhost:3000/api/film/Inception
-router.get("/film/:title", getFilm);
+router.get("/film/:title", filmsController.getFilm);
 //http://localhost:3000/api/film/
 /*{
   "Title": "Test Movie",
